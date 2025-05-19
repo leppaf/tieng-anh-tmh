@@ -1,0 +1,345 @@
+- id: maxilla
+  term: Maxilla
+  vi: xương hàm trên
+  region: rhinology
+
+- id: maxillary-sinus
+  term: Maxillary Sinus
+  vi: xoang hàm
+  region: rhinology
+
+- id: maxillectomy
+  term: Maxillectomy
+  vi: cắt xương hàm trên
+  region: rhinology
+
+- id: medial-maxillectomy
+  term: Medial Maxillectomy
+  vi: cắt vách mũi xoang
+  region: rhinology
+
+- id: endoscopic-medial-maxillectomy
+  term: Endoscopic Medial Maxillectomy
+  vi: Phẫu thuật nội soi cắt vách mũi xoang
+  region: rhinology
+
+- id: maxillary-sinus-antrostomy
+  term: Maxillary Sinus Antrostomy
+  vi: Phẫu thuật mở lỗ thông xoang hàm
+  region: rhinology
+
+- id: frontal-sinus
+  term: Frontal Sinus
+  vi: xoang trán
+  region: rhinology
+
+- id: frontal-bone
+  term: Frontal Bone
+  vi: xương trán
+  region: rhinology
+
+- id: frontal-recess
+  term: Frontal Recess
+  vi: ngách trán
+  region: rhinology
+
+- id: frontal-sinusitis
+  term: Frontal Sinusitis
+  vi: viêm xoang trán
+  region: rhinology
+
+- id: frontal-sinusotomy
+  term: Frontal Sinusotomy
+  vi: phẫu thuật mở lỗ thông xoang trán
+  region: rhinology
+
+- id: frontal-sinus-surgery
+  term: Frontal Sinus Surgery
+  vi: phẫu thuật xoang trán
+  region: rhinology
+
+- id: endoscopic-frontal-sinus-surgery
+  term: Endoscopic frontal sinus surgery
+  vi: phẫu thuật nội soi xoang trán 
+  region: rhinology
+
+- id: draf-frontal-sinusotomy
+  term: Draf Frontal Sinusotomy
+  vi: Phẫu thuật dẫn lưu xoang trán theo Draf (I,II,III)
+  region: rhinology
+
+- id: lothrop-procedure
+  term: Lothrop Procedure
+  vi: Phẫu thuật dẫn lưu xoang trán trung tâm
+  region: rhinology
+
+- id: modified-lothrop-endoscopic-procedure
+  term: Modified Lothrop Endoscopic Procedure
+  vi: Phẫu thuật dẫn lưu xoang trán trung tâm có cải tiến qua nội soi (Draf III)
+  region: rhinology
+
+- id: external-frontal-sinus-surgery
+  term: External Frontal Sinus Surgery
+  vi: Phẫu thuật xoang trán qua đường ngoài
+  region: rhinology
+
+- id: ethmoid-sinus
+  term: Ethmoid Sinus
+  vi: xoang sàng
+  region: rhinology
+
+- id: ethmoid-bone
+  term: Ethmoid Bone
+  vi: xương sàng
+  region: rhinology
+
+- id: anterior-ethmoid-sinus
+  term: Anterior Ethmoid Sinus
+  vi: xoang sàng trước
+  region: rhinology
+
+- id: posterior-ethmoid-sinus
+  term: Posterior Ethmoid Sinus
+  vi: xoang sàng sau
+  region: rhinology
+
+- id: ethmoid-bulla
+  term: Ethmoid Bulla
+  vi: bóng sàng
+  region: rhinology
+
+- id: ethmoid-air-cells
+  term: Ethmoid Air Cells
+  vi: Các tế bào sàng
+  region: rhinology
+
+- id: ethmoidectomy
+  term: Ethmoidectomy
+  vi: Nạo sàng
+  region: rhinology
+
+- id: anterior-ethmoidectomy
+  term: Anterior Ethmoidectomy
+  vi: Nạo sàng trước
+  region: rhinology
+
+- id: complete-ethmoidectomy
+  term: Complete Ethmoidectomy
+  vi: Nạo sàng toàn bộ
+  region: rhinology
+
+- id: ethmoid-sinusitis
+  term: Ethmoid Sinusitis
+  vi: viêm xoang sàng
+  region: rhinology
+
+- id: middle-nasal-concha
+  term: Middle Nasal Concha
+  vi: cuốn mũi giữa
+  region: rhinology
+
+- id: middle-turbinate
+  term: Middle Turbinate
+  vi: cuốn mũi giữa
+  region: rhinology
+
+- id: turbinate-hypertrophy
+  term: Turbinate Hypertrophy
+  vi: phì đại cuốn mũi
+  region: rhinology
+
+- id: concha-bullosa
+  term: Concha Bullosa
+  vi: Xoang hơi cuốn mũi
+  region: rhinology
+
+- id: middle-meatus
+  term: Middle Meatus
+  vi: khe mũi giữa
+  region: rhinology
+
+- id: middle-meatal-antrostomy
+  term: Middle Meatal Antrostomy
+  vi: phẫu thuật mở khe giữa
+  region: rhinology
+
+- id: ostiomeatal-complex
+  term: Ostiomeatal Complex
+  vi: phức hợp lỗ thông khe giữa
+  region: rhinology
+
+
+- id: hard-palate
+  term: Hard Palate
+  vi: khẩu cái cứng
+  region: rhinology
+
+- id: palatal-surgery
+  term: Palatal Surgery
+  vi: phẫu thuật khẩu cái cứng
+  region: rhinology
+
+- id: hard-palate-mucosa
+  term: Hard Palate Mucosa
+  vi: niêm mạc khẩu cái cứng
+  region: rhinology
+
+- id: oral-cavity
+  term: Oral Cavity
+  vi: khoang miệng
+  region: rhinology
+
+- id: oral-cavity-anatomy
+  term: Oral Cavity Anatomy
+  vi: giải phẫu khoang miệng
+  region: rhinology
+
+- id: oral-cavity-tumors
+  term: Oral Cavity Tumors
+  vi: u khoang miệng
+  region: rhinology
+
+- id: oral-cavity-examination
+  term: Oral Cavity Examination
+  vi: khám khoang miệng
+  region: rhinology
+
+- id: mandible
+  term: Mandible
+  vi: xương hàm dưới
+  region: rhinology
+
+- id: mandibular-fracture
+  term: Mandibular Fracture
+  vi: gãy xương hàm dưới
+  region: rhinology
+
+- id: mandibular-nerve
+  term: Mandibular Nerve
+  vi: dây thần kinh hàm dưới
+  region: rhinology
+
+- id: mandibulectomy
+  term: Mandibulectomy
+  vi: cắt bỏ xương hàm dưới
+  region: rhinology
+
+- id: mandibular-surgery
+  term: Mandibular Surgery
+  vi: phẫu thuật xương hàm dưới
+  region: rhinology
+
+- id: inferior-nasal-concha
+  term: Inferior Nasal Concha
+  vi: cuốn mũi dưới
+  region: rhinology
+
+- id: inferior-turbinate
+  term: Inferior Turbinate
+  vi: cuốn mũi dưới
+  region: rhinology
+
+- id: inferior-turbinate-lateralization
+  term: Inferior Turbinate Lateralization
+  vi: bẻ cuốn mũi dưới
+  region: rhinology
+
+- id: inferior-turbinate-hypertrophy
+  term: Inferior Turbinate Hypertrophy
+  vi: phì đại cuốn mũi dưới
+  region: rhinology
+
+- id: inferior-turbinate-reduction-surgery
+  term: Inferior Turbinate Reduction Surgery
+  vi: Phẫu thuật giảm thể tích cuốn mũi dưới
+  region: rhinology
+
+- id: nasal-septum
+  term: Nasal Septum
+  vi: vách ngăn mũi
+  region: rhinology
+
+- id: deviated-nasal-septum
+  term: Deviated Nasal Septum
+  vi: vẹo vách ngăn mũi
+  region: rhinology
+
+- id: septoplasty
+  term: Septoplasty
+  vi: phẫu thuật chỉnh hình vách ngăn mũi
+  region: rhinology
+
+- id: nasal-septal-perforation
+  term: Nasal Septal Perforation
+  vi: thủng vách ngăn mũi
+  region: rhinology
+
+- id: ocular-cavity
+  term: Ocular Cavity
+  vi: Ổ mắt
+  region: rhinology
+
+- id: orbital-fracture
+  term: Orbital Fracture
+  vi: gãy xương ổ mắt
+  region: rhinology
+
+- id: orbital-cellulitis
+  term: Orbital Cellulitis
+  vi: viêm mô tế bào ổ mắt
+  region: rhinology
+
+- id: infraorbital
+  term: Infraorbital
+  vi: dưới ổ mắt
+  region: rhinology
+
+- id: supraorbital
+  term: Supraorbital
+  vi: trên ổ mắt
+  region: rhinology
+
+- id: olfactory-nerve
+  term: Olfactory Nerve
+  vi: thần kinh khứu giác
+  region: rhinology
+
+- id: olfactory-bulb
+  term: Olfactory Bulb
+  vi: hành khứu
+  region: rhinology
+
+- id: olfactory-epithelium
+  term: Olfactory Epithelium
+  vi: biểu mô khứu giác
+  region: rhinology
+
+- id: olfactory-dysfunction
+  term: Olfactory Dysfunction
+  vi: rối loạn khứu giác
+  region: rhinology
+
+- id: brain
+  term: Brain
+  vi: não
+  region: rhinology
+
+- id: frontal-lobe
+  term: Frontal Lobe
+  vi: thùy trán
+  region: rhinology
+
+- id: skull-base
+  term: Skull Base
+  vi: sàn sọ
+  region: rhinology
+
+- id: neurosurgery
+  term: Neurosurgery
+  vi: phẫu thuật thần kinh
+  region: rhinology
+
+- id: brain-abscess
+  term: Brain Abscess
+  vi: áp xe não
+  region: rhinology

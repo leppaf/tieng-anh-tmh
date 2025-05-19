@@ -1,0 +1,194 @@
+---
+layout: none
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Medical Terminology Reference</title>
+
+  <style>
+    /* --- Global Resets --- */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    /* --- Header & Toggle --- */
+    .site-header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: #005a9c;
+      color: white;
+      padding: 0.75rem 1rem;
+      position: relative;
+      z-index: 2000; /* above overlay */
+    }
+    .site-header h1 {
+      font-size: 1.25rem;
+    }
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      color: white;
+      cursor: pointer;
+      position: absolute;
+      top: 0.75rem;
+      left: 1rem;
+    }
+
+    /* --- Overlay for dimming --- */
+    .overlay {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.4);
+      z-index: 1000;
+    }
+
+    /* --- Region Menu (Desktop) --- */
+    .region-menu {
+      order: 2;
+      margin-top: 0.5rem;
+    }
+    .region-menu ul {
+      display: inline-flex;
+      gap: 0.5rem;
+      list-style: none;
+    }
+    .region-menu a {
+      text-decoration: none;
+      color: white;
+      padding: 0.5rem 0.75rem;
+      background: #0078d4;
+      border-radius: 4px;
+      font-size: 0.95rem;
+    }
+    .region-menu a:hover { background: #005a9c; }
+
+    /* --- Search & Cards --- */
+    .search-section { padding: 1rem; }
+    .search-section input {
+      width: 100%;
+      padding: 0.75rem;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      margin-bottom: 1rem;
+    }
+    .card {
+      border: 1px solid #ddd;
+      margin: 0.5rem 1rem;
+      padding: 0.75rem;
+      border-radius: 4px;
+      background: #f0f8ff;
+    }
+    .card h2 { color: #005a9c; margin-bottom: 0.25rem; }
+    .card p { font-style: italic; }
+
+    /* --- Mobile/Tablet Styles --- */
+    @media (max-width: 800px) {
+      .menu-toggle {
+        display: block;
+      }
+      .region-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0; right: 0;
+        background: #0078d4;
+        padding: 1rem;
+        z-index: 1500;
+      }
+      .region-menu.open {
+        display: block;
+      }
+      .region-menu ul {
+        flex-wrap: wrap;
+        display: flex;
+      }
+      .region-menu li {
+        width: 50%;
+        margin-bottom: 0.75rem;
+      }
+      .region-menu a {
+        background: transparent;
+        color: white;
+        padding: 0.25rem 0;
+        display: block;
+      }
+      /* show overlay when menu open */
+      .overlay.show {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay" id="overlay"></div>
+
+  <header class="site-header">
+    <button class="menu-toggle" aria-expanded="false" aria-label="Toggle menu">☰</button>
+    <h1>Medical Terminology Reference</h1>
+    <nav class="region-menu" id="regionMenu">
+      <ul>
+        <li><a href="rhinology.html">Rhinology</a></li>
+        <!-- add other region links here -->
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="search-section">
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Search all terms…"
+        aria-label="Search all terms"
+      />
+      <div id="results"></div>
+    </section>
+  </main>
+
+  <script>
+    // Mobile menu toggle & overlay
+    const btn = document.querySelector('.menu-toggle');
+    const nav = document.getElementById('regionMenu');
+    const overlay = document.getElementById('overlay');
+    btn.addEventListener('click', () => {
+      const open = nav.classList.toggle('open');
+      overlay.classList.toggle('show', open);
+      btn.setAttribute('aria-expanded', open);
+    });
+    // Close menu if overlay clicked
+    overlay.addEventListener('click', () => {
+      nav.classList.remove('open');
+      overlay.classList.remove('show');
+      btn.setAttribute('aria-expanded', false);
+    });
+  </script>
+
+  <script>
+    // Live search over your nodes
+    const nodes = {{ site.data.nodes | jsonify }};
+    const resultsContainer = document.getElementById('results');
+    document.getElementById('searchInput').addEventListener('input', e => {
+      const q = e.target.value.toLowerCase().trim();
+      resultsContainer.innerHTML = '';
+      if (!q) return;
+      nodes.forEach(n => {
+        if (
+          n.term.toLowerCase().includes(q) ||
+          n.vi.toLowerCase().includes(q)
+        ) {
+          const card = document.createElement('div');
+          card.className = 'card';
+          card.innerHTML = `<h2>${n.term}</h2><p><em>${n.vi}</em></p>`;
+          resultsContainer.appendChild(card);
+        }
+      });
+    });
+  </script>
+</body>
+</html>

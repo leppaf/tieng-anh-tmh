@@ -1,0 +1,130 @@
+---
+layout: none
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Rhinology Terms</title>
+
+  <style>
+    /* --- Header --- */
+    .site-header {
+      background: #004a8f;
+      color: white;
+      padding: 0.75rem 1rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .site-header h1 {
+      margin: 0;
+      font-size: 1.25rem;
+      flex-grow: 1;
+    }
+    .back-button {
+      background: #0078d4;
+      color: white;
+      border: none;
+      padding: 0.5rem 0.75rem;
+      border-radius: 4px;
+      font-size: 0.95rem;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    .back-button:hover {
+      background: #005a9c;
+    }
+
+    /* --- Search & Cards --- */
+    .search-section {
+      padding: 1rem;
+    }
+    .search-section input {
+      width: 100%;
+      padding: 0.75rem;
+      font-size: 1rem;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      margin-bottom: 1rem;
+    }
+    .card {
+      border: 1px solid #ddd;
+      margin: 0.5rem 1rem;
+      padding: 0.75rem;
+      border-radius: 4px;
+      background: #f0f8ff;
+    }
+    .card h2 {
+      margin: 0 0 0.25rem;
+      color: #004a8f;
+    }
+    .card p {
+      margin: 0;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <a href="index.html" class="back-button">← All Terms</a>
+    <h1>Rhinology</h1>
+  </header>
+
+  <main>
+    <section class="search-section">
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Search Rhinology terms…"
+        aria-label="Search Rhinology terms"
+      />
+      <div id="results"></div>
+    </section>
+  </main>
+
+  <script>
+    // Load all nodes and filter for this region
+    const allNodes = {{ site.data.nodes | jsonify }};
+    let regionNodes = allNodes
+      .filter(n => n.region === 'rhinology')
+      .sort((a, b) => a.term.localeCompare(b.term));
+
+    const resultsContainer = document.getElementById('results');
+    const input = document.getElementById('searchInput');
+
+    // Function to render a list of nodes
+    function renderList(list) {
+      resultsContainer.innerHTML = '';
+      list.forEach(n => {
+        const card = document.createElement('div');
+        card.className = 'card';
+        card.innerHTML = `
+          <h2>${n.term}</h2>
+          <p><em>${n.vi}</em></p>
+        `;
+        resultsContainer.appendChild(card);
+      });
+    }
+
+    // Initial render: all terms
+    renderList(regionNodes);
+
+    // Update on search
+    input.addEventListener('input', e => {
+      const q = e.target.value.toLowerCase().trim();
+      if (!q) {
+        renderList(regionNodes);
+        return;
+      }
+      const filtered = regionNodes.filter(n =>
+        n.term.toLowerCase().includes(q) ||
+        n.vi.toLowerCase().includes(q)
+      );
+      renderList(filtered);
+    });
+  </script>
+</body>
+</html>
